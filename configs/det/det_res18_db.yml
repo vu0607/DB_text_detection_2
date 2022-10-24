@@ -113,8 +113,8 @@ Eval:
   dataset:
     name: SimpleDataSet
     data_dir: 
-    label_file_list: ../input/private-test-new-3/private_test_new_3/
-      - ../input/private-test-new-3/private_test_new_3/annotations.txt
+    label_file_list: /kaggle/input/private-test-new-3/private_test_new_3/
+      - /kaggle/input/private-test-new-3/private_test_new_3/annotations.txt
     transforms:
       - DecodeImage: # load image
           img_mode: BGR

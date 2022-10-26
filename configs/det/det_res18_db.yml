@@ -3,7 +3,7 @@ Global:
   epoch_num: 240
   log_smooth_window: 20
   print_batch_step: 20
-  save_model_dir: ./augmentation/
+  save_model_dir: ./augmentation
   save_epoch_step: 120
   # evaluation is run every 2000 iterations after the 3000th iteration
   eval_batch_step: [20, 4000]
@@ -112,9 +112,9 @@ Train:
 Eval:
   dataset:
     name: SimpleDataSet
-    data_dir: 
-    label_file_list: ../../input/private-test-new-3/private_test_new_3/
-      - ../../input/private-test-new-3/private_test_new_3/annotations_kaggle.txt
+    data_dir: ../../input/private-test-new-3/private_test_new_3/
+    label_file_list:
+      - ../../input/private-test-new-3/private_test_new_3/annotations_k.txt
     transforms:
       - DecodeImage: # load image
           img_mode: BGR

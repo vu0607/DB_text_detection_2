@@ -8,8 +8,8 @@ Global:
   # evaluation is run every 2000 iterations after the 3000th iteration
   eval_batch_step: [20, 4000]
   cal_metric_during_train: False
-  pretrained_model: ./pretrain_models/ResNet18_vd_pretrained
-  checkpoints: 
+  pretrained_model: 
+  checkpoints: ../../input/db-r18-v261-1/db_r18_v2.6.1_1/latest
   save_inference_dir:
   use_visualdl: True
   visualdl_file_name: vdlrecords
@@ -69,7 +69,7 @@ Train:
     name: SimpleDataSet
     data_dir: ../../input/dataset-v262/dataset_v2.6.2/
     label_file_list:
-      - ../../input/dataset-v262/dataset_v2.6.2/train_kaggle.txt
+      - ../../input/dataset-v262/dataset_v2.6.2/train.txt
     ratio_list: [1.0]
     transforms:
       - DecodeImage: # load image
@@ -106,7 +106,7 @@ Train:
   loader:
     shuffle: True
     drop_last: False
-    batch_size_per_card: 8
+    batch_size_per_card: 16
     num_workers: 4
 
 Eval:
@@ -114,7 +114,7 @@ Eval:
     name: SimpleDataSet
     data_dir: ../../input/private-test-new-3/private_test_new_3/
     label_file_list:
-      - ../../input/private-test-new-3/private_test_new_3/annotations_kaggle.txt
+      - ../../input/private-test-new-3/private_test_new_3/annotations.txt
     transforms:
       - DecodeImage: # load image
           img_mode: BGR

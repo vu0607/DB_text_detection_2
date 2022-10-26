@@ -3,12 +3,12 @@ Global:
   epoch_num: 240
   log_smooth_window: 20
   print_batch_step: 20
-  save_model_dir: /kaggle/working/DB_text_detection_2/augmentation/
+  save_model_dir: ./augmentation/
   save_epoch_step: 120
   # evaluation is run every 2000 iterations after the 3000th iteration
   eval_batch_step: [20, 4000]
   cal_metric_during_train: False
-  pretrained_model: /kaggle/working/DB_text_detection_2/pretrain_models/ResNet18_vd_pretrained
+  pretrained_model: ./pretrain_models/ResNet18_vd_pretrained
   checkpoints: 
   save_inference_dir:
   use_visualdl: True
@@ -67,9 +67,9 @@ Metric:
 Train:
   dataset:
     name: SimpleDataSet
-    data_dir: /kaggle/input/dataset-v262/dataset_v2.6.2/
+    data_dir: ../../input/dataset-v262/dataset_v2.6.2/
     label_file_list:
-      - /kaggle/input/dataset-v262/dataset_v2.6.2/train_kaggle.txt
+      - ../../input/dataset-v262/dataset_v2.6.2/train_kaggle.txt
     ratio_list: [1.0]
     transforms:
       - DecodeImage: # load image
@@ -113,8 +113,8 @@ Eval:
   dataset:
     name: SimpleDataSet
     data_dir: 
-    label_file_list: /kaggle/input/private-test-new-3/private_test_new_3/
-      - /kaggle/input/private-test-new-3/private_test_new_3/annotations_kaggle.txt
+    label_file_list: ../../input/private-test-new-3/private_test_new_3/
+      - ../../input/private-test-new-3/private_test_new_3/annotations_kaggle.txt
     transforms:
       - DecodeImage: # load image
           img_mode: BGR

@@ -69,7 +69,7 @@ Train:
     name: SimpleDataSet
     data_dir: ../../input/dataset-v262/dataset_v2.6.2/
     label_file_list:
-      - ../../input/dataset-v262/dataset_v2.6.2/train.txt
+      - ../../input/dataset-v262/dataset_v2.6.2/train_kaggle.txt
     ratio_list: [1.0]
     transforms:
       - DecodeImage: # load image
@@ -114,7 +114,7 @@ Eval:
     name: SimpleDataSet
     data_dir: 
     label_file_list: ../../input/private-test-new-3/private_test_new_3/
-      - ../../input/private-test-new-3/private_test_new_3/annotations.txt
+      - ../../input/private-test-new-3/private_test_new_3/annotations_kaggle.txt
     transforms:
       - DecodeImage: # load image
           img_mode: BGR

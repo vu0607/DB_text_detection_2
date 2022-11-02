@@ -8,8 +8,8 @@ Global:
   # evaluation is run every 2000 iterations after the 3000th iteration
   eval_batch_step: [20, 4000]
   cal_metric_during_train: False
-  pretrained_model: ../../input/db-r18-v261-3/db_r18_v2.6.1_3/latest
-  checkpoints: 
+  pretrained_model: 
+  checkpoints: ../../input/db-r18-v261-5/db_r18_v2.6.1_5/latest
   save_inference_dir:
   use_visualdl: True
   visualdl_file_name: vdlrecords

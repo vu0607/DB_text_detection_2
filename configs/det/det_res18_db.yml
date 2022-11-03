@@ -9,7 +9,7 @@ Global:
   eval_batch_step: [20, 4000]
   cal_metric_during_train: False
   pretrained_model: 
-  checkpoints: ../../input/db-r18-v261-5/db_r18_v2.6.1_5/latest
+  checkpoints: ../../input/db-r18-v261-5/db_r18_v2.6.0_1/latest
   save_inference_dir:
   use_visualdl: True
   visualdl_file_name: vdlrecords
@@ -67,9 +67,9 @@ Metric:
 Train:
   dataset:
     name: SimpleDataSet
-    data_dir: ../../input/dataset-v262/dataset_v2.6.2/
+    data_dir: ../../input/dataset-v261/dataset_v2.6.1/
     label_file_list:
-      - ../../input/dataset-v262/dataset_v2.6.2/train.txt
+      - ../../input/dataset-v261/dataset_v2.6.1/train.txt
     ratio_list: [1.0]
     transforms:
       - DecodeImage: # load image
@@ -112,9 +112,9 @@ Train:
 Eval:
   dataset:
     name: SimpleDataSet
-    data_dir: ../../input/private-test-new-3/private_test_new_3/
+    data_dir: ../../input/dataset-v261/dataset_v2.6.1/
     label_file_list:
-      - ../../input/private-test-new-3/private_test_new_3/annotations.txt
+      - ../../input/dataset-v261/dataset_v2.6.1/annotations.txt
     transforms:
       - DecodeImage: # load image
           img_mode: BGR
